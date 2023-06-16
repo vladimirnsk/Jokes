@@ -8,7 +8,6 @@ public class Audio {
 
     private String track; // адрес трека(файла)
     private Clip clip = null;// ссылка на объект класса
-    private FloatControl volumeC = null;// контролер громкости
     private double wt; //уровень громкости
     private boolean pl_audio;// воспроизведение звука
 
@@ -35,7 +34,6 @@ public class Audio {
             clip = AudioSystem.getClip();//Получаем реализацию интерфейса Clip
             clip.open(tr); //Загружаем наш звуковой поток в Clip
             //Получаем контроллер громкости
-            volumeC = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 
             if(!this.pl_audio) {
                 clip.setFramePosition(0); //устанавливаем указатель на старт

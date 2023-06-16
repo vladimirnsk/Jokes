@@ -4,12 +4,14 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 
+import java.util.List;
+
 public class JokeLabel extends Label {
 
-    private String[] jokes;
+    private List<String> jokes;
     private int currentIndex;
 
-    public JokeLabel(String[] jokes) {
+    public JokeLabel(List<String> jokes) {
         this.jokes = jokes;
         currentIndex = 0;
         setWrapText(true);
@@ -19,10 +21,10 @@ public class JokeLabel extends Label {
     }
 
     public void showNextJoke() {
-        if (currentIndex >= jokes.length) {
+        if (currentIndex >= jokes.size()) {
             setText("Анекдоты кончились");
         } else {
-            setText(jokes[currentIndex]);
+            setText(jokes.get(currentIndex));
             currentIndex++;
         }
     }

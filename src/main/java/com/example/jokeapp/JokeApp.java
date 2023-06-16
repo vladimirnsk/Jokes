@@ -6,25 +6,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.util.List;
+
 public class JokeApp {
 
     private Stage primaryStage;
-    private String[] jokes;
+    private List<String> jokes;
 
     public JokeApp(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        jokes = new String[]{
-                "1. — Привет! Что там у тебя, как себя чувствуешь? \n" +
-                        "— Да ничего, все норм.\n" +
-                        "— Чем занимаешься?\n" +
-                        "— Сижу дома, в игры играю.\n" +
-                        "— Молодец, очень ответственное поведение во время пандемии!\n" +
-                        "— Какой еще пандемии?",
-                "2. I'm reading a book about anti-gravity. It's impossible to put down!",
-                "3. Why don't skeletons fight each other? They don't have the guts!",
-                "4. Why did the scarecrow win an award? Because he was outstanding in his field!",
-                "5. What do you call a fish wearing a crown? King mackerel!"
-        };
+        jokes = JokeRepository.getJokes();
     }
 
     public void start() {
