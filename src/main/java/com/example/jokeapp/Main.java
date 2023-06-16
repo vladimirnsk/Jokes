@@ -12,7 +12,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        Audio track = new Audio("sound.wav", 100);
+        Audio track = new Audio("sound.wav", 0);
         track.play();
         launch(args);
     }

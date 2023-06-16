@@ -14,7 +14,12 @@ public class JokeApp {
     public JokeApp(Stage primaryStage) {
         this.primaryStage = primaryStage;
         jokes = new String[]{
-                "1. Why don't scientists trust atoms? Because they make up everything!",
+                "1. — Привет! Что там у тебя, как себя чувствуешь? \n" +
+                        "— Да ничего, все норм.\n" +
+                        "— Чем занимаешься?\n" +
+                        "— Сижу дома, в игры играю.\n" +
+                        "— Молодец, очень ответственное поведение во время пандемии!\n" +
+                        "— Какой еще пандемии?",
                 "2. I'm reading a book about anti-gravity. It's impossible to put down!",
                 "3. Why don't skeletons fight each other? They don't have the guts!",
                 "4. Why did the scarecrow win an award? Because he was outstanding in his field!",

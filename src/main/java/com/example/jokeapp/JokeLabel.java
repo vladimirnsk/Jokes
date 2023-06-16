@@ -7,12 +7,11 @@ import javafx.scene.text.Font;
 public class JokeLabel extends Label {
 
     private String[] jokes;
-    private int currentJokeIndex;
+    private int currentIndex;
 
     public JokeLabel(String[] jokes) {
         this.jokes = jokes;
-        currentJokeIndex = -1;
-
+        currentIndex = 0;
         setWrapText(true);
         setAlignment(Pos.CENTER);
         setFont(Font.font(16));
@@ -20,11 +19,11 @@ public class JokeLabel extends Label {
     }
 
     public void showNextJoke() {
-        currentJokeIndex++;
-        if (currentJokeIndex >= jokes.length) {
+        if (currentIndex >= jokes.length) {
             setText("Анекдоты кончились");
         } else {
-            setText(jokes[currentJokeIndex]);
+            setText(jokes[currentIndex]);
+            currentIndex++;
         }
     }
 }
